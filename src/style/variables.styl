@@ -1,0 +1,66 @@
+// Color Palette - Theme Vàng Rực Rỡ & Sang Trọng (Gold, Amber, Sunshine)
+$primary-gold = #F59E0B
+$gold-light = #FDE68A
+$gold-dark = #B45309
+$gold-bright = #FBBF24
+$gold-glow = #FEF08A
+$gold-deep = #78350F
+$amber-50 = #FFFBEB
+$amber-100 = #FEF3C7
+$amber-200 = #FDE68A
+$amber-500 = #F59E0B
+$amber-600 = #D97706
+$amber-900 = #78350F
+
+$warm-bg = #FFFDF5
+$card-bg = rgba(255, 255, 255, 0.85)
+$text-main = #451A03
+$text-muted = #92400E
+
+// Gradients
+$gold-gradient = linear-gradient(135deg, #F59E0B 0%, #FBBF24 50%, #F59E0B 100%)
+$gold-glow-gradient = linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 50%, #FDE68A 100%)
+$shimmer-gradient = linear-gradient(90deg, #F59E0B, #FFFBEB, #FBBF24, #F59E0B)
+
+// Shadows
+$shadow-gold = 0 10px 25px -5px rgba(245, 158, 11, 0.3), 0 8px 10px -6px rgba(245, 158, 11, 0.2)
+$shadow-glow = 0 0 25px rgba(251, 191, 36, 0.5)
+$shadow-card = 0 20px 35px -10px rgba(120, 53, 15, 0.15)
+
+// Fonts
+$font-title = 'Pacifico', cursive
+$font-hand = 'Dancing Script', cursive
+$font-body = 'Be Vietnam Pro', sans-serif
+$font-display = 'Montserrat', sans-serif
+
+// Mixins
+gold-button()
+  background: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%)
+  color: #78350F
+  font-weight: 700
+  padding: 12px 28px
+  border-radius: 9999px
+  border: 2px solid #FEF08A
+  box-shadow: $shadow-gold
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+  cursor: pointer
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  gap: 8px
+
+  &:hover
+    transform: translateY(-3px) scale(1.03)
+    box-shadow: 0 15px 30px rgba(245, 158, 11, 0.5), $shadow-glow
+    background: linear-gradient(135deg, #FDE68A 0%, #F59E0B 100%)
+
+  &:active
+    transform: translateY(1px) scale(0.98)
+
+card-glass()
+  background: rgba(255, 255, 255, 0.88)
+  backdrop-filter: blur(12px)
+  -webkit-backdrop-filter: blur(12px)
+  border: 2px solid rgba(253, 230, 138, 0.7)
+  border-radius: 24px
+  box-shadow: $shadow-card
